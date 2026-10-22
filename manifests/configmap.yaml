@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-web-content
+  labels:
+    app.kubernetes.io/name: hello-web
+    app.kubernetes.io/part-of: k3s-app-delivery
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="en">
+      <head><meta charset="utf-8"><title>Hello from K3s</title></head>
+      <body>
+        <h1>Hello from K3s</h1>
+        <p>Project 02: declarative, health-checked application delivery.</p>
+        <p>Release: v1</p>
+      </body>
+    </html>

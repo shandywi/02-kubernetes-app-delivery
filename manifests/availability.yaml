@@ -1,0 +1,12 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: hello-web
+  labels:
+    app.kubernetes.io/name: hello-web
+    app.kubernetes.io/part-of: k3s-app-delivery
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hello-web

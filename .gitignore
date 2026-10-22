@@ -1,0 +1,22 @@
+# Local evidence and diagnostics; redact selected excerpts before committing.
+artifacts/
+
+# Credentials and Kubernetes access
+*.kubeconfig
+kubeconfig
+*.pem
+*.key
+*.crt
+.env
+.env.*
+!.env.example
+secrets*.yaml
+secrets*.yml
+!secrets.example.yaml
+!secrets.example.yml
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
